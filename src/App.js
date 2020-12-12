@@ -30,16 +30,30 @@ export default function App() {
 
   return (
     <div className="App">
-      <h2>Recommended movies</h2>
-      <h4>These movies, I think are nice, check these out</h4>
+      <h2
+        style={{
+          color: "white"
+        }}
+      >
+        Recommended movies
+      </h2>
+      <h4
+        style={{
+          color: "white"
+        }}
+      >
+        These movies, I think are nice, check these out
+      </h4>
       {Object.keys(moviesDB).map((genre) => (
         <button
           key={genre}
           onClick={() => handleButtonClick(genre)}
           style={{
-            background: "#ebe3b2",
-            color: "#877f4e",
+            cursor: "pointer",
+            background: "#3e3636",
+            color: "white",
             padding: ".5rem 1rem",
+            border: "1px solid goldenrod",
             borderRadius: ".5rem",
             margin: ".3rem"
           }}
@@ -75,12 +89,15 @@ export default function App() {
         {moviesDB[genreSelected].map((movie) => (
           <li
             style={{
+              textAlign: "center",
+              background: "#3e3636",
               listStyle: "none",
               padding: ".5rem 1rem",
               margin: "1rem",
               width: "20rem",
-              border: "1px solid #241f04",
-              borderRadius:".5rem"
+              border: "1px solid goldenrod",
+              borderRadius: ".5rem",
+              color: "white"
             }}
           >
             {movie.name}
