@@ -82,28 +82,35 @@ export default function App() {
       </button> */}
       <hr />
 
-      <>
+      <div>
         {/* {moviesDB[genreSelected].map((movies) => {
           <li>{movies}</li>
         })} */}
-        {moviesDB[genreSelected].map((movie) => (
-          <li
-            style={{
-              textAlign: "center",
-              background: "#3e3636",
-              listStyle: "none",
-              padding: ".5rem 1rem",
-              margin: "1rem",
-              width: "20rem",
-              border: "1px solid goldenrod",
-              borderRadius: ".5rem",
-              color: "white"
-            }}
-          >
-            {movie.name}
-          </li>
-        ))}
-      </>
+        <ul
+          style={{
+            textAlign: "center",
+            margin: "auto"
+          }}
+        >
+          {moviesDB[genreSelected].map((movie) => (
+            <li
+              style={{
+                textAlign: "center",
+                background: "#3e3636",
+                listStyle: "none",
+                padding: ".5rem 1rem",
+                margin: "1rem",
+                width: "20rem",
+                border: "1px solid goldenrod",
+                borderRadius: ".5rem",
+                color: "white"
+              }}
+            >
+              {movie.name}
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }
