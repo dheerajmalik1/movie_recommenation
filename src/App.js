@@ -2,19 +2,41 @@ import React, { useState } from "react";
 import "./styles.css";
 
 const moviesDB = {
-  scienceFiction: [{ name: "Interstellar" }, { name: "Inception" }],
-
-  thriller: [
+  scienceFiction: [
     {
-      name: "Edge of tomorrow"
+      name: "Interstellar",
+      imagSrc:
+        "https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"
+    },
+    {
+      name: "Inception",
+      imagSrc:
+        "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg"
     }
   ],
 
-  funny: [{ name: "Hangover" }],
+  thriller: [
+    {
+      name: "Edge of tomorrow",
+      imagSrc:
+        "https://m.media-amazon.com/images/M/MV5BMTc5OTk4MTM3M15BMl5BanBnXkFtZTgwODcxNjg3MDE@._V1_SX300.jpg"
+    }
+  ],
+
+  funny: [
+    {
+      name: "Hangover",
+      imagSrc:
+        "https://m.media-amazon.com/images/M/MV5BZWYwYjE2NWQtZmMwMi00YWVhLTgwOGMtODQ4NDQ2NTA4Y2ZkXkEyXkFqcGdeQXVyNjA3OTI5MjA@._V1_SX300.jpg"
+    }
+  ],
 
   motivational: [
-    { name: "Shawshank Redemption" },
-    { name: "Persuit of Heppyness" }
+    {
+      name: "Shawshank Redemption",
+      imagSrc:
+        "https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"
+    }
   ]
 };
 export default function App() {
@@ -107,6 +129,7 @@ export default function App() {
               }}
             >
               {movie.name}
+              <img src={movie.imagSrc}></img>
             </li>
           ))}
         </ul>
